@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  full_url: MyString
+  shortened_url: MyString
+  counter: 
+  default: MyString
+  0: MyString
+
+two:
+  full_url: MyString
+  shortened_url: MyString
+  counter: 
+  default: MyString
+  0: MyString

@@ -1,0 +1,21 @@
+<h1>Bitly Clone</h1>
+
+<% if flash[:notice] %>
+<p>ERROR: <%= flash[:notice]  %></p>
+<% end %>
+
+<form name="shortener" method="post" action="/urls">
+Long URL: <input type="text" name="full_url">
+<input type="submit">
+</form>
+
+<%= form_tag "/urls", :method=> "post" do %>
+<%= label(:full_url, :name, "Long URL:") %>
+<%= text_field_tag(:full_url) %>
+<%= submit_tag("Submit") %>
+<% end %>
+
+<%= form_for Url.new, :controller => "urls", :action => "create" do |f| %>
+  Long URL: <%= f.text_field :full_url %>
+  <%= f.submit %>
+<% end %>
